@@ -1,0 +1,79 @@
+<button mat-raised-button color="primary" style="margin:5px;margin-left: 45%;" type="submit" (click)="change()" class="btn btn-primary">Add Discount</button>
+
+<br/>
+<br/>
+<div>
+ <div>
+ <h1 style="text-align:center; color: black;">Discounts</h1>
+<p style="text-align: center;" class="icons" ><i class="fa fa-star" aria-hidden="true"></i>---<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>---<i class="fa fa-star" aria-hidden="true"></i></p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Discount Code</th>
+            <th scope="col">Discount Name</th>
+            <th scope="col">discount Amount</th>
+            <th scope="col">User Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let discount of discount">
+            <td>{{discount.discountCode}}</td>
+            <td>{{discount.discountName }}</td>
+            <td>{{discount.discountAmount}}</td>
+            <td>{{discount.email}}</td>
+            <td><input type="button" value="Delete" class="btn btn-danger" (click)="deleteDiscount(discount.discountCode)" />
+            </td>
+        </tr>
+    </tbody>
+</table> 
+</div>
+
+<div *ngIf="flag" style="text-align: center;" class="mydiv">
+    
+    
+
+   
+    <mat-card-title>Add Discounts</mat-card-title>
+    <form #productRef="ngForm" (ngSubmit)="storeDiscount(productRef)">
+        <p>
+            <mat-form-field style="width:400px ;height: 60px !important">
+                <input matInput type="text" name="discountCode" placeholder="Enter discountCode" required ngModel />
+                <mat-error>Enter DiscountCode</mat-error>
+                
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field style="width:400px;height: 60px !important">
+                <input matInput type="text" name="discountName" placeholder="Enter Discount Name" required ngModel />
+                <mat-error>Enter Discount name</mat-error>
+                
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field style="width:400px;height: 60px !important">
+                <input matInput type="number" name="discountAmount" placeholder="Enter Discount Amount" required
+                    ngModel />
+                <mat-error>Enter Discount Amount</mat-error>
+                
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field style="width:400px;height: 60px !important">
+                <input matInput type="text" name="email" placeholder="Enter User Email" required ngModel />
+                <mat-error>Enter User Email</mat-error>
+                
+            </mat-form-field>
+        </p>
+       
+        <button mat-raised-button color="warn" style="margin:5px;" type="submit" class="btn btn-primary">Save</button>
+        <button mat-raised-button color="primary" style="margin:5px;" type="reset"
+            class="btn btn-primary ">Reset</button>
+    </form>
+    <br />
+    <hr />
+
+</div>
+
+</div>
+
+ 

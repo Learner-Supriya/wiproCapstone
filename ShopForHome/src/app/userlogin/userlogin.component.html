@@ -1,0 +1,29 @@
+<div style="text-align: center;" class="mydiv">
+    <br/>
+    <mat-card-title style="color:rgb(66, 65, 64) ;">User Login</mat-card-title>
+
+    <form [formGroup]="loginForm">
+        <div>
+            <mat-form-field style="width:400px; height: 80px !important" appearance="outline">
+                <input matInput type="text" formControlName="email" placeholder="Enter email here" required />
+                <mat-error>Enter Email</mat-error>
+                <mat-label>Email</mat-label>
+            </mat-form-field>
+        </div>
+        <!-- Input for password -->
+        <div >
+            <mat-form-field style="width:400px;  height: 80px !important" appearance="outline">
+                <input matInput type="password" formControlName="password"  required />
+                <mat-error>Enter password</mat-error>
+                <mat-label >Password</mat-label>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button class="btn" style="background-color: #4CAF50; color:white" (click)=onSubmit()>
+            Login
+        </button><br/><br/>
+        <a  routerLink="/userregister">New User? Click to SignUp!!</a><br/>
+            <br/>
+            
+    </form>
+    <br/>
+</div>

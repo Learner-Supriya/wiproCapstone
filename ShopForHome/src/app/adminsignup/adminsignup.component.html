@@ -1,0 +1,56 @@
+<div style="text-align: center;" class="mydiv">
+    <mat-card-title >Admin Registeration</mat-card-title>
+    <span style="color:rgb(39, 112, 13);font-size: 20px;">{{storeMsg}}</span>
+
+    <form #AdminRef="ngForm" (ngSubmit)="storeAdmin(AdminRef)">
+        <div>
+            <mat-form-field style="width:400px; height: 80px !important" appearance="outline">
+                <input matInput type="text" name="username" id="exampleInputName1" required
+                    ngModel />
+                <mat-error>Enter Name</mat-error>
+                <mat-label>Name</mat-label>
+            </mat-form-field>
+        </div>
+        <!-- Input for Email -->
+        <div>
+            <mat-form-field style="width:400px; height: 80px !important" appearance="outline">
+                <input matInput type="text" name="email" id="exampleInputEmail1" required
+                    ngModel />
+                <mat-error>Enter Email</mat-error>
+                <mat-label>Email</mat-label>
+            </mat-form-field>
+        </div>
+        <!-- Input for Password -->
+        <div>
+            <mat-form-field style="width:400px;height: 80px !important" appearance="outline">
+                <input matInput type="text" name="password" id="exampleInputPassword1" 
+                    required ngModel />
+                <mat-error>Enter Password</mat-error>
+                <mat-label>Password</mat-label>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field style="width:400px;height: 80px !important" appearance="outline">
+                <input matInput type="text" name="phone" id="exampleInputPhone1" required
+                    ngModel />
+                <mat-error>Enter Phone Number</mat-error>
+                <mat-label>Phone Number</mat-label>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field style="width:400px;height: 80px !important" appearance="outline">
+                <input matInput type="text" name="address" id="exampleInputAddress1" required
+                    ngModel />
+                <mat-error>Enter Address</mat-error>
+                <mat-label>Address</mat-label>
+            </mat-form-field>
+        </div>
+        <button type="submit" class="btn" style="background-color: '#4CAF50'; color:'white'">SignUp</button>
+    </form>
+   
+    <a routerLink="/adminlogin">Already Registered? Click to
+        SignIn!!</a><br />
+    <br />
+
+    
+    </div>

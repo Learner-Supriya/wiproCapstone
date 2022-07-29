@@ -1,0 +1,28 @@
+card-top{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+}
+
+.item img{
+    width: 150px;
+    height :150px ;
+    padding: 5px;
+    border: 3px solid black;
+    object-fit: cover;
+    }
+.item{
+    margin:0px 15px;
+    text-align: center;
+}
+
+.item a:hover{
+    color: red;
+}
+.card{
+    padding: 20px;
+    margin: 50px;
+}

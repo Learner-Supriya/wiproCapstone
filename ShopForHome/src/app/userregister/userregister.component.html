@@ -1,0 +1,58 @@
+<div style="text-align: center;" class="mydiv">
+    <mat-card-title style="color:rgb(66, 65, 64) ;">User Registeration</mat-card-title><br/>
+    <form #UserRef="ngForm" (ngSubmit)="storeUser(UserRef)">
+        <!-- Input for Email -->
+        <span style="color:red;font-size: 20px;">{{storeMsg}}</span>
+        <div>
+            <mat-form-field style="width:400px; height: 80px !important" appearance="outline">
+                <input matInput type="text" name="name" id="exampleInputName1" required
+                    ngModel />
+                <mat-error>Enter Name</mat-error>
+                
+                <mat-label>Name</mat-label>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field style="width:400px; height: 80px !important" appearance="outline">
+                <input matInput type="text" name="email" id="exampleInputEmail1" required
+                    ngModel />
+                <mat-error>Enter Email</mat-error>
+                
+                <mat-label>Email</mat-label>
+            </mat-form-field>
+        </div>
+        <!-- Input for Password -->
+        <div>
+            <mat-form-field style="width:400px; height: 80px !important" appearance="outline">
+                <input matInput type="password" name="password" id="exampleInputPassword1"
+                    required ngModel />
+                <mat-error>Enter Password</mat-error>
+                
+                <mat-label>Password</mat-label>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field style="width:400px; height: 80px !important" appearance="outline">
+                <input matInput type="text" name="phone" id="examplePhoneNumber1" required
+                    ngModel />
+                <mat-error>Enter Phone Number</mat-error>
+                
+                <mat-label>Phone Number</mat-label>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field style="width:400px; height: 80px !important" appearance="outline">
+                <input matInput type="text" name="address" id="exampleInputAddress1" required
+                    ngModel />
+                <mat-error>Enter Address</mat-error>
+                
+                <mat-label>Address</mat-label>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button class="btn" style="background-color: whitesmoke; " type="submit"
+            class="btn btn-primary">SignUp</button>
+    </form>
+    <a routerLink="/userlogin">Already Registered? Click to SignIn!!</a>
+    <br />
+    
+</div>

@@ -1,0 +1,17 @@
+.mydiv{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    height:400px;
+    width:30em;
+    margin-top: -9em; 
+    margin-left: -15em; 
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 10px;
+    
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: rgba(255, 255, 255, 0.778);
+    border-radius: 5px;
+  }

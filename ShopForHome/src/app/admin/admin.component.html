@@ -1,0 +1,92 @@
+
+
+<div style="text-align: center;" class="container">
+    <div *ngIf="flag">
+        <mat-card-title >Update Product</mat-card-title>
+        <form (ngSubmit)="updateProductPrice()">
+        <div>
+            <mat-form-field style="width:400px; height: 70px" appearance="outline">
+            <input matInput type="text" name="productId" [(ngModel)]="productId" readonly />
+            <mat-error>Enter Product ID</mat-error>
+            <mat-label>Product ID</mat-label>
+            </mat-form-field>
+        </div>
+
+        <div>
+        <mat-form-field style="width:400px; height: 70px !important" appearance="outline">
+            <input matInput type="text" name="productName" [(ngModel)]="productName" />
+            <mat-error>Enter Product Name</mat-error>
+            <mat-label>Product Name</mat-label>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field style="width:400px; height: 70px !important" appearance="outline">
+            <input matInput type="text" name="productCategory" [(ngModel)]="productCategory" />
+            <mat-error>Enter Product Category</mat-error>
+            <mat-label>Product Category</mat-label>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field style="width:400px; height: 70px !important" appearance="outline">
+            <input matInput type="number" name="productPrice" [(ngModel)]="productPrice" />
+            <mat-error>Enter Product Price</mat-error>
+            <mat-label>Product Price</mat-label>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field style="width:400px; height: 70px !important" appearance="outline">
+            <input matInput type="url" name="url" [(ngModel)]="url" />
+            <mat-error>Enter Image URL</mat-error>
+            <mat-label>Image URL</mat-label>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field style="width:400px; height: 70px !important" appearance="outline">
+            <input matInput type="number" name="stocks" [(ngModel)]="stocks" />
+            <mat-error>Enter Stocks</mat-error>
+            <mat-label>stocks</mat-label>
+            </mat-form-field>
+        </div>
+
+
+            <button style="margin:5px;" type="submit" class="btn btn-primary">Update Product</button>
+            <button style="margin:5px;" type="reset" class="btn btn-primary ">Reset</button>
+        </form>
+    </div>
+</div>
+<!-- Displaying the Product Details in the table -->
+<br/>
+<br/>
+<h1 style="text-align:center; color: black;">STOCKS</h1>
+<p style="text-align: center;" class="icons" ><i class="fa fa-star" aria-hidden="true"></i>---<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>---<i class="fa fa-star" aria-hidden="true"></i></p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Product ID</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Price</th>
+            <th scope="col">Category</th>
+            <th scope="col">Image</th>
+            <th scope="col">Stocks</th>
+            <th scope="col">Delete Product</th>
+            <th scope="col">Update Product</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.productId}}</td>
+            <td>{{product.productName }}</td>
+            <td>{{product.productPrice}}</td>
+            <td>{{product.productCategory}}</td>
+            <td><img class="card-img-top" src='{{product.url}}' style="height: 75px; width:100px;"></td>
+            <td>{{product.stocks}}</td>
+            <td><input type="button" value="Delete" class="btn btn-danger" (click)="deleteProduct(product.productId)" />
+            </td>
+            <td><input type="button" value="Update" class="btn btn-success" (click)="updateProduct(product)" /></td>
+        </tr>
+    </tbody>
+</table>

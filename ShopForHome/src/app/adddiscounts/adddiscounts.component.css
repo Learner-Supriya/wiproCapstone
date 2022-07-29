@@ -1,0 +1,12 @@
+.mydiv{
+    position:fixed;
+    top: 42%;
+    left: 50%;
+    width:30em;
+    margin-top: -7em; 
+    margin-left: -15em; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+    
+  }

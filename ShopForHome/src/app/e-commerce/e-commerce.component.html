@@ -1,0 +1,59 @@
+<!-- Updating the Product details -->
+<div style="text-align: center;" class="mydiv">
+    
+    
+
+        <!-- Adding New product details -->
+        <mat-card-title>Add Products</mat-card-title>
+        <form #productRef="ngForm" (ngSubmit)="storeProduct(productRef)">
+            <p>
+                <mat-form-field style="width:400px ;height: 40px !important">
+                    <input matInput type="text" name="productId" placeholder="Enter Product ID" required ngModel />
+                    <mat-error>Enter ProductID</mat-error>
+                    
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field style="width:400px;height: 40px !important">
+                    <input matInput type="text" name="productName" placeholder="Enter Product Name" required ngModel />
+                    <mat-error>Enter Product name</mat-error>
+                    
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field style="width:400px;height: 40px !important">
+                    <input matInput type="number" name="productPrice" placeholder="Enter Product Price" required
+                        ngModel />
+                    <mat-error>Enter Product Price</mat-error>
+                    
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field style="width:400px;height: 40px !important">
+                    <input matInput type="url" name="url" placeholder="Enter Product Image URL" required ngModel />
+                    <mat-error>Enter Product Image URL</mat-error>
+                    
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field style="width:400px;height: 40px !important">
+                    <input matInput type="text" name="productCategory" placeholder="Enter Category" required ngModel />
+                    <mat-error>Enter Category</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field style="width:400px;height: 40px !important">
+                    <input matInput type="number" name="stocks" placeholder="Enter Stocks" required ngModel />
+                    <mat-error>Enter Stocks</mat-error>
+                </mat-form-field>
+            </p>
+            <button mat-raised-button color="warn" style="margin:5px;" type="submit" class="btn btn-primary">Store
+                Product</button>
+            <button mat-raised-button color="primary" style="margin:5px;" type="reset"
+                class="btn btn-primary ">Reset</button>
+        </form>
+        <br />
+        <button mat-raised-button color="warn" style="margin:5px;" type="submit" routerLink="/csvupload"  class="btn btn-primary">Bulk Upload</button>
+        <hr />
+    
+</div>

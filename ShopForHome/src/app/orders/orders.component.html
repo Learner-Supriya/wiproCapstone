@@ -1,0 +1,37 @@
+
+<div style="display:flex; justify-content:center; text-align: center;">
+    <form action="" class="d-flex flex-column mt-5" style="width:400px;" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <label for="">From Date</label>
+        <input type="date" clas="mt-3" name="d1" required [(ngModel)]="d1">
+        <br>
+        <label for="">To Date</label>
+        <input type="date" class="mt-3" name="d2" required [(ngModel)]="d2">
+        <br>
+        <button class="btn btn-sm btn-success">Get Sales Report</button>
+    </form>
+</div>
+<br/>
+<br/>
+<h1 style="text-align:center; color: black;">Sales Report</h1>
+<p style="text-align: center;" class="icons" ><i class="fa fa-star" aria-hidden="true"></i>---<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>---<i class="fa fa-star" aria-hidden="true"></i></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Order ID</th>
+            <th scope="col">Item</th>
+            <th scope="col">Mail</th>
+            <th scope="col">Price</th>
+            <th scope="col">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of order">
+            <td>{{product.orderId}}</td>
+            <td>{{product.item }}</td>
+            <td>{{product.userMail}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.createdDate}}</td>
+        </tr>
+    </tbody>
+</table>

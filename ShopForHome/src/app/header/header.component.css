@@ -1,0 +1,64 @@
+mat-toolbar{
+  background-image:linear-gradient(rgba(104, 26, 214, 0),rgba(91, 6, 147, 0.9)), url('src\assets\home.jpg');
+}
+
+mat-toolbar-row{
+  
+  padding: 3%;
+}
+.nine{
+  padding-top:3%;
+  padding-left: 30%;
+ 
+}
+.nine h1 {
+  text-align:center; font-size:50px; text-transform:uppercase; color:#222; letter-spacing:1px;
+  font-family:"Playfair Display", serif; font-weight:400;
+}
+.nine h1 span {
+  margin-top: 5px;
+    font-size:15px; color:#444; word-spacing:1px; font-weight:normal; letter-spacing:2px;
+    text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.nine h1 span:after,.nine h1 span:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 5px;
+  background-color:#f8f8f8;
+}
+
+.form-control {
+    border-radius: 50px;
+    width: 600px;
+    margin-left: 150px;
+  }
+  .search-icon{
+      position: absolute;
+      z-index: 10;
+      right: 53%;
+      top: 20px;
+     
+  }
+  
+  
+.btn{
+  margin-left: 40px;
+}
+
+#logout{
+  margin-right:0%;
+}
+  .mx-2 {
+     color:#fff;
+     font-size: 20px;
+  }
+  

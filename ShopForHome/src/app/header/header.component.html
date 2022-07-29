@@ -1,0 +1,35 @@
+<!-- Displaying the Title and required buttons -->
+<header>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <div class="nine">
+        <h1>Shop For Home<span>Redesign</span></h1>
+      </div>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <button class="btn btn-primary" *ngIf="service.AdminloggedIn()=='admin'" routerLink="/orders">Sales Reports</button><br />
+      <input  type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" 
+        placeholder="Search for products, brands and more">
+        <button class="btn btn-secondary" *ngIf="service.AdminloggedIn()=='admin'" routerLink="admin">Dashboard</button>
+      <button class="btn btn-primary" routerLink="products">Home <i style="color: white;" class="fa fa-home" aria-hidden="true"></i></button>
+      <button class="btn btn-info" *ngIf="!(service.loggedIn())" routerLink="userregister">User <i class="fa fa-user" aria-hidden="true" style="font-size: large;"></i></button>
+      
+      <button class="btn btn-info" *ngIf="!(service.loggedIn())" routerLink="adminsignup" color="warn">Admin <i class="fa fa-lock" aria-hidden="true" style="font-size: large;"></i></button>
+      <button class="btn btn-primary" *ngIf="service.AdminloggedIn()=='admin'" routerLink="/users">Users</button>
+      <button class="btn btn-primary" *ngIf="service.AdminloggedIn()=='admin'" routerLink="/adddiscounts">Discounts</button>
+      <button class="btn btn-primary" *ngIf="service.AdminloggedIn()=='admin'" routerLink="/ecommerce">Add Products</button><br />
+      <button class="btn btn-primary" *ngIf="service.AdminloggedIn()=='user'" routerLink="/discount">My Offers</button>
+      <div>
+        <button class="btn btn-primary" style="margin-right:20px" color="" *ngIf="service.AdminloggedIn()=='user'" routerLink="cart"
+          class="btn btn-primary">
+          <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+          <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+      </div>
+      <button class="btn btn-primary" style="margin-right:20px"  *ngIf="service.AdminloggedIn()=='user'" routerLink="wishlist"
+          ><i style="font-size: 30px;color: white;" class="fa fa-heart"></i></button>
+      <a class="btn btn-danger" id="logout" routerLink="" *ngIf="service.loggedIn()"
+        (click)="service.logoutUser()" color="warn">logout</a>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>

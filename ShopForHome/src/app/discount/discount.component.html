@@ -1,0 +1,16 @@
+
+<h1 style="text-align: center; color: black;">DISCOUNTS</h1>
+<p  style="text-align:center" class="icons" ><i class="fa fa-star" aria-hidden="true"></i>---<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>---<i class="fa fa-star" aria-hidden="true"></i></p>
+<div style="margin-left: 30%;">
+
+    <div *ngFor="let discount of userdiscount">
+<div class="card col-md-3">
+    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+        {{discount.discountName}}</h5>
+        <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+            Discount worth:   {{discount.discountAmount}}</h5>
+    <p><strong>Code: </strong>{{discount.discountCode}}</p>
+    <button class="btn btn-primary" routerLink="/cart" >Avail Now</button>
+</div>
+</div>
+</div>

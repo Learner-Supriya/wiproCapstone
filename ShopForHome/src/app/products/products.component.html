@@ -1,0 +1,78 @@
+
+<div class="bg">
+<div>
+<h1 style="text-align:center; color: black;">PRODUCT CARD</h1>
+<p style="text-align: center;" class="icons" ><i class="fa fa-star" aria-hidden="true"></i>---<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>---<i class="fa fa-star" aria-hidden="true"></i></p>
+<div class="card-top container-fluid" style="margin-left: 80px;">
+    <br>
+    <div class="contaier d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <img src="https://images.pexels.com/photos/6187617/pexels-photo-6187617.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                <br><br>
+                <h6>ALL PRODUCTS</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Home')">
+                <img src="https://images.pexels.com/photos/2950003/pexels-photo-2950003.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                <br><br>
+                <h6>HOME</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Grocery')">
+                <img src="https://images.pexels.com/photos/4110226/pexels-photo-4110226.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                <br><br>
+                <h6>GROCERY</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Mobiles')">
+                <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                <br><br>
+                <h6>MOBILES</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Fashion')">
+                <img src="https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                <br><br>
+                <h6>FASHION</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Beauty')">
+                <img src="https://images.pexels.com/photos/3373745/pexels-photo-3373745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <br><br>
+                <h6>BEAUTY</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Appliances')">
+                <img src="https://images.pexels.com/photos/6192127/pexels-photo-6192127.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                <br><br>
+                <h6>APPLIANCES</h6>
+            </a>
+        </div>
+    </div>
+</div>
+    <div class="container" style="margin-top: 5%">
+        <div class="row">
+            <ng-container *ngFor="let product of filterCategory | filter:searchKey:'productName'">
+                <div class="card col-md-3">
+                    <img class="card-img-top" src='{{product.url}}'>
+                    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                        {{product.productName}}</h5>
+                    <p><strong>Price:</strong>{{product.productPrice}}</p>
+                    <button class="btn btn-primary" (click)="addtocart(product)">Add to Cart</button>
+
+                <br/>
+                <br/>
+                <button class="btn btn-primary" (click)="addtowishlist(product)">Add to Wishlist</button>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+</div>
